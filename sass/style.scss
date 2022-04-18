@@ -1,0 +1,76 @@
+ $primary: #f3f3f3;
+ $info:#03c087;
+
+ $enable-negative-margins: true;
+.page-hero {
+    background: "../img/back.png";
+    background-size: cover;
+    background-position: center;
+    height: 30vh;
+}
+@media (max-width: 768px){
+    .page-hero{
+        height: 50vh;
+    }
+}
+.product-card {
+    transition: all 0.2s;
+}
+.product-card:hover{
+    cursor: pointer;
+    transform: translateY(-3%)
+}
+.footer-widget__link{
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: lightgray;
+}
+.footer-widget span{
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: lightgray;
+}
+.copyright{
+    background: #111;
+    font-size : 0.8rem;
+    color: lightgrey; 
+}
+.copyright__link{
+    text-decoration: none;
+    color: grey;
+}
+@import "../node_modules/bootstrap/scss/functions";
+
+@import "../node_modules/bootstrap/scss/variables";
+
+@import"../node_modules/bootstrap/scss/utilities";
+
+$our-theme-colors: (
+    ourMainColor: #085c55,
+    ourSecondaryColor: #ffa69e,
+    ourMainDarkColor: #19ac87,
+    ourSecondaryDarkColor: #051533,
+);
+
+$theme-colors: map-merge($our-theme-colors, $theme-colors);
+@each $key, $value in $grays {
+    .bg-gray-#{$key} {
+        background-color: $value !important;
+    }
+
+    .text-gray-#{$key}{
+        color: $value !important;
+    }
+}
+@each $key, $value in $purple {
+    .bg-purple-#{$key} {
+        background-color: $value !important;
+    }
+
+    .text-purple-#{$key}{
+        color: $value !important;
+    }
+}
+
+//@import"../node_modules/bootstrap/scss/utilities/api";
+@import "../node_modules/bootstrap/scss/bootstrap";
